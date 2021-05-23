@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("checking out checkboxes", function(){
+describe("checking out checkboxes, dropDowns etc", function(){
     it("checkBoxes", function()
     {
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/");
@@ -19,4 +19,26 @@ describe("checking out checkboxes", function(){
 
         
     })
+    
+    it("dropDowns, Dynamic and Static",function()
+        {
+            // cy.get("select[id='dropdown-class-example']").click();
+            // it is a html rule that dropdown are lablled as "select". Hence, .click() will not work for this. We have .select() in place for click() here.
+
+            //Static Dropdown
+            cy.get("select[id='dropdown-class-example']").select("option2").should("have.value","option2")
+
+            //Dynamic Dropdown
+            cy.get("input[class='inputs ui-autocomplete-input']").type("Ind")
+
+            cy.get(".ui-menu-item div").each(($e1,index,$list)=>{ // use this whenever iterating an array or list
+
+                if($e1.text()==='India') // matching the suggestion with India, is matched then click.
+                $e1.trigger("click");
+
+            })
+            cy.get("input[class='inputs ui-autocomplete-input']").should("have.value","India")// asserting that India is selected.
+        }
+    )
+
 })
