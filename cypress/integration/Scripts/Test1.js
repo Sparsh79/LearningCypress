@@ -1,13 +1,12 @@
 /// <reference types="Cypress" />
 
-describe("Adding to the cart",function()
+describe("Basic operations- adding elements to the cart",function()
 {
-    it("first test case",function(){
-
-    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
-    cy.get("input[type='search']").type("ca");
+    it("adding items to the cart",function(){
+    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/"); // simliar to selenium's driver.get(URL);
+    cy.get("input[type='search']").type("ca"); // "get" here is for loactors, we can find elements using "get", but cypress only supports CSS locators. 
     cy.wait(2000);
-    cy.get("div[class='product']").should("have.length",4);
+    cy.get("div[class='product']").should("have.length",4); // "should" here is for asserting, this statement must return 4 elements.
 
      // parent child chaning.
     cy.get(".products").find(".product").should("have.length",4);
