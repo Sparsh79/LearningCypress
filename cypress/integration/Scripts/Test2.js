@@ -62,7 +62,7 @@ describe("checking out checkboxes, dropDowns etc", function(){
         //Hence, since window:alert is able to capture the popup, we will use mocha assertions to validte it.
         // Do remember that we will not see this in the browser while the execution. 
         
-        cy.on("window:confim",(String)=> // this is the case where we would have to select confirm/OK or cancel from the pop-up.
+        cy.on("window:confirm",(String)=> // this is the case where we would have to select confirm/OK or cancel from the pop-up.
         {
             expect(String).to.equal("Hello , Are you sure you want to confirm?")
           //  return false, if you don't want to cancel the pop-up.
