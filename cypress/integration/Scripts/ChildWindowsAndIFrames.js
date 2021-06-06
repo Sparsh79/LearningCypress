@@ -31,13 +31,13 @@ describe("Handling childWindows",function(){
         // we can see this in the test. 
     })
     
-    it("childWindow, expected to fail beacuse of url having different domain", function(){
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
-        cy.wait(2000)
-        cy.visit("https://www.knoldus.com/home")
-        // here cypress will throw an error, something like mentioned below
-        //cy.visit() failed because you are attempting to visit a URL that is of a different origin.
-    })
+    // it("childWindow, expected to fail beacuse of url having different domain", function(){
+    //     cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+    //     cy.wait(2000)
+    //     cy.visit("https://www.knoldus.com/home")
+    //     // here cypress will throw an error, something like mentioned below
+    //     //cy.visit() failed because you are attempting to visit a URL that is of a different origin.
+    // })
 
     it("Handling iFrames", function(){
 
