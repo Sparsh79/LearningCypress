@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testHeadless": "node_modules\\.bin\\cypress run",
+    "withHeadTest":"npm run testHeadless -- --headed",
+    "chromeTest": "npm run test -- --browser chrome"
   },
   "author": "",
   "license": "ISC",
