@@ -6,7 +6,8 @@
   "scripts": {
     "testHeadless": "node_modules\\.bin\\cypress run",
     "withHeadTest":"npm run testHeadless -- --headed",
-    "chromeTest": "npm run test -- --browser chrome"
+    "chromeTest": "npm run testHeadless -- --browser chrome",
+    "dashboard": "node_modules/.bin/cypress run --record --key 35d457bf-63e5-4296-8e65-7e7cfdadc541"
   },
   "author": "",
   "license": "ISC",
