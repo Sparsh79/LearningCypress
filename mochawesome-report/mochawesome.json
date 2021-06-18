@@ -1,99 +1,23 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 2,
-    "passes": 2,
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
     "pending": 0,
     "failures": 0,
-    "start": "2021-06-06T13:24:21.454Z",
-    "end": "2021-06-06T13:24:27.105Z",
-    "duration": 5651,
-    "testsRegistered": 2,
-    "passPercent": 100,
-    "pendingPercent": 0,
+    "start": "2021-06-06T15:39:23.547Z",
+    "end": "2021-06-06T15:39:23.549Z",
+    "duration": 2,
+    "testsRegistered": 0,
+    "passPercent": null,
+    "pendingPercent": null,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    {
-      "uuid": "894d6a7c-b178-4345-97ac-1a48ee4f4725",
-      "title": "",
-      "fullFile": "cypress/integration/Scripts/Test1.js",
-      "file": "cypress/integration/Scripts/Test1.js",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "39d50d60-6c99-4446-9a08-c8ef723de631",
-          "title": "Basic operations- adding elements to the cart",
-          "fullFile": "",
-          "file": "",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "adding items to the cart",
-              "fullTitle": "Basic operations- adding elements to the cart adding items to the cart",
-              "timedOut": null,
-              "duration": 3859,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\"); // simliar to selenium's driver.get(URL);\ncy.get(\"input[type='search']\").type(\"ca\"); // \"get\" here is for loactors, we can find elements using \"get\", but cypress only supports CSS locators. \ncy.wait(2000);\ncy.get(\"div[class='product']\").should(\"have.length\", 4); // \"should\" here is for asserting, this statement must return 4 elements.\n// parent child chaning.\ncy.get(\".products\").find(\".product\").should(\"have.length\", 4);\ncy.get(\".products\").find(\".product\").eq(2).contains(\"ADD TO CART\").click(); // eq is for index, I don't find it much useful as we are hardcoding the values here.  \ncy.get(\".products\").find(\".product\").each(($e1, index, $list) => {\n  // \"each\" is for iterating through the array. \n  var testVeg = $e1.find(\"h4[class='product-name']\").text();\n  if (testVeg.includes('Carrot')) $e1.find('button').trigger(\"click\"); // here the .click is deprectaed, hence we used trigger instead of click().\n});",
-              "err": {},
-              "uuid": "ef1487e3-9621-46e2-b627-e8d5e0c0e2a0",
-              "parentUUID": "39d50d60-6c99-4446-9a08-c8ef723de631",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Checking out cart",
-              "fullTitle": "Basic operations- adding elements to the cart Checking out cart",
-              "timedOut": null,
-              "duration": 787,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "// var logo = cy.get(\"div[class='brand greenLogo']\")\n// cy.log(logo.text())  This doesn't work as we introduced a new varibale, which is not according to the cypress understading of code, thus it makes \n// asyncrhronus, hence we would have to use \".then\" for it.\ncy.get(\"div[class='brand greenLogo']\").then(function (logo) {\n  cy.log(logo.text()); // one thing to note here, .text() is not a cypress command , it is jquery one.\n});\ncy.get(\"div[class='brand greenLogo']\").should(\"have.text\", \"GREENKART\");\ncy.get(\"a[class='cart-icon']\").click();\ncy.get(\"button[type='button']\").contains(\"PROCEED TO CHECKOUT\").click();\ncy.contains(\"Place Order\").click();",
-              "err": {},
-              "uuid": "d5b97dea-0fae-417a-b491-1fc03f0ef31d",
-              "parentUUID": "39d50d60-6c99-4446-9a08-c8ef723de631",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "ef1487e3-9621-46e2-b627-e8d5e0c0e2a0",
-            "d5b97dea-0fae-417a-b491-1fc03f0ef31d"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 4646,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
+    false
   ],
   "meta": {
     "mocha": {
