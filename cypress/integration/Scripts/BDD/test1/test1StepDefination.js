@@ -35,3 +35,21 @@ And("Validate the total price",()=>{
 Then("Click on checkout",()=>{
     cy.contains("Checkout").click()
 })
+
+When("We fill the form details",function(dataTable){ //  use read data from cucumber instead of cypress's fixtures. 
+
+    //                                                      |batman| male |
+     cy.get("input[name='name']:nth-child(2)").type(dataTable.rawTable[1][0]) // rawTable will convert the dataTable into a multi dimension array.
+    cy.get("select[class='form-control']").select(dataTable.rawTable[1][1])
+
+})
+
+Then("validate the behaviour",function(dataTable){
+
+    cy.get("input[name='name']:nth-child(2)").should("have.attr","minlength","2")
+    cy.get("#inlineRadio3").should("be.disabled")
+})
+
+And("select the shop page",()=>{
+    cy.contains("Shop").click()
+})
