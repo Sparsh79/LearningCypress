@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "testHeadless": "node_modules\\.bin\\cypress run",
-    "withHeadTest":"npm run testHeadless -- --headed",
+    "withHeadTest": "npm run testHeadless -- --headed",
     "chromeTest": "npm run testHeadless -- --browser chrome",
     "dashboard": "node_modules/.bin/cypress run --record --key 35d457bf-63e5-4296-8e65-7e7cfdadc541"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.3.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
     "cypress-iframe": "^1.0.1",
     "mocha": "^8.4.0",
     "mochawesome": "^6.2.2"
