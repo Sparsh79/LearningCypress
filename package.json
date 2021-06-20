@@ -10,7 +10,13 @@
     "dashboard": "node_modules/.bin/cypress run --record --key 35d457bf-63e5-4296-8e65-7e7cfdadc541"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +25,8 @@
     "cypress-cucumber-preprocessor": "^4.1.2",
     "cypress-iframe": "^1.0.1",
     "mocha": "^8.4.0",
-    "mochawesome": "^6.2.2"
-  }
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "dependencies": {}
 }

@@ -1,0 +1,147 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Sample test for cypress-cucumber",
+    "line": 1,
+    "id": "sample-test-for-cypress-cucumber",
+    "tags": [],
+    "uri": "test1.feature",
+    "elements": [
+      {
+        "id": "sample-test-for-cypress-cucumber;cart-checkout-operations",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Cart Checkout Operations",
+        "tags": [
+          {
+            "name": "@1",
+            "line": 3
+          },
+          {
+            "name": "@sample1",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open an ecommerce page",
+            "result": {
+              "status": "passed",
+              "duration": 2707000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I add items to card",
+            "result": {
+              "status": "passed",
+              "duration": 3981000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "Validate the total price",
+            "result": {
+              "status": "passed",
+              "duration": 219000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Click on checkout",
+            "result": {
+              "status": "passed",
+              "duration": 283000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "sample-test-for-cypress-cucumber;filling-the-form",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Filling the form",
+        "tags": [
+          {
+            "name": "@2",
+            "line": 10
+          },
+          {
+            "name": "@sample2",
+            "line": 10
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I open an ecommerce page",
+            "result": {
+              "status": "passed",
+              "duration": 346000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "name",
+                      "gender"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "batman",
+                      "Male"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 14,
+            "name": "We fill the form details",
+            "result": {
+              "status": "passed",
+              "duration": 508000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "validate the behaviour",
+            "result": {
+              "status": "passed",
+              "duration": 79000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "select the shop page",
+            "result": {
+              "status": "passed",
+              "duration": 305000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
