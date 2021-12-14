@@ -1,0 +1,16 @@
+resources:
+- name: cypress
+  type: git
+  source:
+    uri: https://github.com/Sparsh79/LearningCypress.git
+    branch: master
+
+jobs: 
+- name: job
+  serial: true
+  plan:
+  - get: cypress
+    trigger: true
+  - task: test
+    privileged: true
+    file: cypress/test.yml

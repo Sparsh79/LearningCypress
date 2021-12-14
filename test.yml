@@ -1,0 +1,17 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: maven
+    tag: latest
+
+inputs:
+  - name: cypress
+outputs:
+  - name: output
+
+run:
+  path: /bin/bash
+  args:
+    - cypress/test-script.sh
