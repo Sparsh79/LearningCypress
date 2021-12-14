@@ -1,3 +1,4 @@
+apt install nodejs
 
 cd cypress
 
