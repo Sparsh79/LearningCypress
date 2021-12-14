@@ -1,5 +1,5 @@
 resources:
-- name: cypressGit
+- name: cypressgit
   type: git
   source:
     uri: https://github.com/Sparsh79/LearningCypress.git
@@ -9,8 +9,8 @@ jobs:
 - name: job
   serial: true
   plan:
-  - get: cypressGit
+  - get: cypressgit
     trigger: true
   - task: test
     privileged: true
-    file: cypressGit/test.yml
+    file: cypressgit/test.yml

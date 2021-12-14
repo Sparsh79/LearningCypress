@@ -7,11 +7,11 @@ image_resource:
     tag: latest
 
 inputs:
-  - name: cypressGit
+  - name: cypressgit
 outputs:
   - name: output
 
 run:
   path: /bin/bash
   args:
-    - cypressGit/test-script.sh
+    - cypressgit/test-script.sh
