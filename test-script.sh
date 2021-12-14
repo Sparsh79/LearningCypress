@@ -1,6 +1,6 @@
 apt install nodejs
 
-cd cypress
+cd cypressGit
 
 echo "will start the execution now"
 
