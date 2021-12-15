@@ -1,9 +1,10 @@
-apt install nodejs
+# apt install nodejs
 
+npm install cypress --save-dev
 cd cypressgit
 
 echo "will start the execution now"
 
-cd node_modules/.bin/cypress
+# cd node_modules/.bin/cypress
 
-run
+node_modules/.bin/cypress run
