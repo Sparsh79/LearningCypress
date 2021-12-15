@@ -1,3 +1,4 @@
+#! /bin/bash
 # apt install nodejs
 
 npm install cypress --save-dev
