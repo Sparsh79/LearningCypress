@@ -1,8 +1,10 @@
 #! /bin/bash
 # apt install nodejs
 
-npm install cypress --save-dev
+# npm install cypress --save-dev
 cd cypressgit
+
+echo ls 
 
 echo "will start the execution now"
 
