@@ -1,9 +1,4 @@
 #! /bin/bash
-
-alias npm-exec='PATH=$(npm bin):$PATH'
-
-echo npm-exec
-npm-exec which cypress run
 echo "will start the execution now"
 
 # cd node_modules/.bin/cypress
@@ -11,3 +6,7 @@ echo "will start the execution now"
 # node_modules/.bin/cypress run
 
 pwd 
+
+cd pwd/cypressgit/node_modules/cypress run
+
+${npm bin}/cypress run
