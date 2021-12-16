@@ -7,7 +7,7 @@ echo "will start the execution now"
 
 pwd 
 
-cd pwd
+# cd pwd
 
 cd cypressgit/node_modules/cypress run
 
