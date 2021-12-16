@@ -7,7 +7,9 @@ echo "will start the execution now"
 
 pwd 
 
-cd pwd
+npm start & wait-on http://localhost:8080
+
+cypress run
 
 npm run-script testheadless
 # cd cypressgit/node_modules/cypress run
