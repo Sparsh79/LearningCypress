@@ -1,15 +1,10 @@
-#! /bin/bash
-# apt install nodejs
+PATH=$(npm bin):$PATH
 
-# npm install cypress --save-dev
-# cd cypressgit
+alias npm-exec='PATH=$(npm bin):$PATH'
 
-# cypress --version
-
-echo $$(npm bin)
-
+npm-exec/cypress run
 echo "will start the execution now"
 
 # cd node_modules/.bin/cypress
-
-node_modules/.bin/cypress run
+# 
+# node_modules/.bin/cypress run
