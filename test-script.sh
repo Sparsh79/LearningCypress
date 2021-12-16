@@ -2,9 +2,11 @@
 # apt install nodejs
 
 # npm install cypress --save-dev
-cd cypressgit
+# cd cypressgit
 
-echo $(npm bin)
+# cypress --version
+
+echo $$(npm bin)
 
 echo "will start the execution now"
 
