@@ -9,6 +9,7 @@ pwd
 
 cd pwd
 
-cd cypressgit/node_modules/cypress run
+npm run-script testheadless
+# cd cypressgit/node_modules/cypress run
 
 # ${npm bin}/cypress run
