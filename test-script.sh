@@ -4,7 +4,7 @@
 # npm install cypress --save-dev
 cd cypressgit
 
-echo ls 
+echo $(npm bin)
 
 echo "will start the execution now"
 
