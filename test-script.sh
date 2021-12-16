@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 echo "will start the execution now"
 
 # cd node_modules/.bin/cypress
@@ -7,6 +7,8 @@ echo "will start the execution now"
 
 pwd 
 
-cd pwd/cypressgit/node_modules/cypress run
+cd pwd
 
-${npm bin}/cypress run
+cd cypressgit/node_modules/cypress run
+
+# ${npm bin}/cypress run
