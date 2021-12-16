@@ -2,7 +2,8 @@ PATH=$(npm bin):$PATH
 
 alias npm-exec='PATH=$(npm bin):$PATH'
 
-npm-exec/cypress run
+echo npm-exec
+npm-exec which cypress run
 echo "will start the execution now"
 
 # cd node_modules/.bin/cypress
