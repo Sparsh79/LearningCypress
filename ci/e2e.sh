@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd my-cypress-repo/
+cd cypressgit/
 ${npm bin}/cypress run

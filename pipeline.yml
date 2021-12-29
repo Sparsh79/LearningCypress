@@ -6,61 +6,20 @@ resources:
     uri: https://github.com/Sparsh79/LearningCypress.git
     branch: master
 
-- name: node-image
-  type: registry-image
-  source:
-    repository: node
-    tag: 13.10.1-stretch
-
 jobs:
-- name: test
-  public: true
+- name: testjob
+  serial: true
   plan:
-  - get: node-image
   - get: cypressgit
     trigger: true
-  - task: install
-    image: node-image
-    config:
-      inputs:
-      - name: cypressgit
-      outputs:
-      - name: dependencies
-        path: cypressgit/node_modules
-      platform: linux
-      run:
-        path: npm
-        args: ["install"]
-        dir: cypressgit
-  - task: test
-    image: node-image
-    config:
-      inputs:
-      - name: cypressgit
-      - name: dependencies
-        path: cypressgit
-      platform: linux
-      run:
-        path: /bin/bash
-        args:
-          - cypressgit/test-script.sh 
-        # args: [$(npm bin) + "/cypress run"]
-        # dir: cypressgit
-
-# resources:
-# - name: cypressgit
-#   type: git
-#   source:
-#     uri: https://github.com/Sparsh79/LearningCypress.git
-#     branch: master
-
-# jobs: 
-# - name: job
-#   serial: true
-#   plan:
-#   - get: cypressgit
-#     trigger: true
-#   - task: test
-#     image: node-image 
-#     privileged: true
-#     file: cypressgit/test.yml
+  - task: getCypress
+    platform: linux
+    privileged: true
+    image_resource:
+        type: docker-image
+        source:
+            repository: ddubson/cypress-e2e
+    inputs:
+        - cypressgit
+    run:
+        path: cypressgit/ci/e2e.sh
