@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd cypressgit/
-${npm bin}/cypress run
+node_modules/.bin/cypress/cypress run
