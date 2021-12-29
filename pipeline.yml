@@ -38,12 +38,14 @@ jobs:
       inputs:
       - name: cypressgit
       - name: dependencies
-        path: cypressgit/node_modules
+        path: cypressgit
       platform: linux
       run:
-        path: cypressgit
-        args: ["cypress run"]
-        dir: cypressgit
+        path: /bin/bash
+        args:
+          - cypressgit/test-script.sh 
+        # args: [$(npm bin) + "/cypress run"]
+        # dir: cypressgit
 
 # resources:
 # - name: cypressgit
