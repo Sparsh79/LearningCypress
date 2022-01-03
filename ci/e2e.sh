@@ -1,6 +1,8 @@
 cd cypressgit/
 
-npm install cypress --save-dev
+npm bin
+
+cd /root/.cache/Cypress/7.7.0
 # npm run testHeadless
 # npx cypress run
 
