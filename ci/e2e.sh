@@ -1,3 +1,3 @@
-cd cypressgit/
+cd cypressAutomation/
 
 npm run testHeadless
