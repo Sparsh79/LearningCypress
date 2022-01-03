@@ -12,7 +12,7 @@ npm start & wait-on http://localhost:8080
 
 # cypress run
 
-npm run testheadless
+npm run testHeadless
 # cd cypressgit/node_modules/cypress run
 
 # ${npm bin}/cypress run
