@@ -4,4 +4,4 @@ cd cypressgit/
 # npm run testHeadless
 # npx cypress run
 
-node_modules/cypress run
+node_modules/.bin/cypress run
