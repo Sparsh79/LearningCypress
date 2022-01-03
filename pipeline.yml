@@ -1,25 +1,17 @@
 resources:
-- name: cypressgit
+- name: cypressAutomation
   type: git
   icon: github
   source:
     uri: https://github.com/Sparsh79/LearningCypress.git
     branch: master
 
-jobs:
-- name: testjob
+jobs: 
+- name: test
   serial: true
   plan:
-  - get: cypressgit
+  - get: cypressAutomation
     trigger: true
-  - task: getCypress
-    platform: linux
+  - task: runtests
     privileged: true
-    image_resource:
-        type: docker-image
-        source:
-            repository: ddubson/cypress-e2e
-    inputs:
-        - cypressgit
-    run:
-        path: cypressgit/ci/e2e.sh
+    file: cypressAutomation/test.yml
