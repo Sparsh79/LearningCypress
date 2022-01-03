@@ -6,11 +6,11 @@ image_resource:
     repository: ddubson/cypress-e2e
 
 inputs:
-  - name: cypressAutomation
+  - name: cypressgit
 outputs:
   - name: npm-output
 
 run:
   path: /bin/bash
   args:
-    - cypressAutomation/ci/e2e.sh
+    - cypressgit/ci/e2e.sh
