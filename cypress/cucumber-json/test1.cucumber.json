@@ -31,7 +31,7 @@
             "name": "I open an ecommerce page",
             "result": {
               "status": "passed",
-              "duration": 1006000000
+              "duration": 1343000000
             }
           },
           {
@@ -41,7 +41,7 @@
             "name": "I add items to card",
             "result": {
               "status": "passed",
-              "duration": 2880000000
+              "duration": 2628000000
             }
           },
           {
@@ -51,7 +51,7 @@
             "name": "Validate the total price",
             "result": {
               "status": "passed",
-              "duration": 59000000
+              "duration": 57000000
             }
           },
           {
@@ -61,7 +61,7 @@
             "name": "Click on checkout",
             "result": {
               "status": "passed",
-              "duration": 191000000
+              "duration": 184000000
             }
           }
         ]
@@ -90,7 +90,7 @@
             "name": "I open an ecommerce page",
             "result": {
               "status": "passed",
-              "duration": 408000000
+              "duration": 379000000
             }
           },
           {
@@ -117,7 +117,7 @@
             "name": "We fill the form details",
             "result": {
               "status": "passed",
-              "duration": 428000000
+              "duration": 648000000
             }
           },
           {
@@ -127,7 +127,7 @@
             "name": "validate the behaviour",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 31000000
             }
           },
           {
@@ -137,7 +137,7 @@
             "name": "select the shop page",
             "result": {
               "status": "passed",
-              "duration": 344000000
+              "duration": 373000000
             }
           }
         ]

@@ -1,17 +1,81 @@
 resources:
-- name: cypressAutomation
+- name: cypressgit
   type: git
   icon: github
   source:
     uri: https://github.com/Sparsh79/LearningCypress.git
     branch: master
 
-jobs: 
+# - name: node-image
+#   type: registry-image
+#   source:
+#     repository: node
+#     tag: 13.10.1-stretch
+
+# - name: cypress-image
+  # type: docker-image
+  # source:
+    # repository: ddubson/cypress-e2e
+
+jobs:
 - name: test
-  serial: true
+  public: true
   plan:
-  - get: cypressAutomation
+  # - get: node-image
+  - get: cypressgit
     trigger: true
-  - task: runtests
-    privileged: true
-    file: cypressAutomation/test.yml
+  # - task: install
+  #   image: node-image
+  #   config:
+  #     inputs:
+  #     - name: cypressgit
+  #     outputs:
+  #     - name: dependencies
+  #       path: cypressgit/node_modules
+  #     platform: linux
+  #     run:
+  #       path: npm
+  #       args: ["install"]
+  #       dir: cypressgit
+  - task: running
+    file: cypressgit/test.yml
+  # - task: run-cypress
+  #   platform: linux
+  #   image_resource:
+  #       type: docker-image
+  #       source:
+  #         repository: ddubson/cypress-e2e
+  #   inputs:
+  #    - cypressgit
+  #   run:
+  #     path: cypressgit/ci/e2e.sh
+  #     run:
+  #       path: npm
+  #       args: ["run-script testHeadless"]
+  #       dir: cypressgit
+
+  # - task: run-cypress
+  #   image: node-image
+  #   config:
+  #     inputs:
+  #     - name: cypressgit
+  #     # outputs: 
+  #     # - name: dependencies
+  #       # path: cypressgit/node_modules/.bin/cypress
+  #     platform: linux
+  #     run:
+  #       path: npm
+  #       args: ["run-script","testHeadless"]
+  #       dir: cypressgit
+  # - task: test
+  #   image: node-image
+  #   config:
+  #     inputs:
+  #     - name: cypressgit
+  #     - name: dependencies
+  #       path: cypressgit/node_modules/.bin/cypress
+  #     platform: linux
+  #     run:
+  #       path: cypressgit
+  #       args: ["cypress run"]
+  #       dir: cypressgit

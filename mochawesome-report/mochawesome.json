@@ -1,23 +1,99 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2021-06-06T15:39:23.547Z",
-    "end": "2021-06-06T15:39:23.549Z",
-    "duration": 2,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2021-12-15T11:56:22.352Z",
+    "end": "2021-12-15T11:56:29.904Z",
+    "duration": 7552,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "4985e0ba-536f-4220-aa22-084b55e2de5e",
+      "title": "",
+      "fullFile": "cypress/integration/Scripts/BDD/test1.feature",
+      "file": "cypress/integration/Scripts/BDD/test1.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8c6d633-b47b-46d8-b92c-b634dc59e21a",
+          "title": "Sample test for cypress-cucumber",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cart Checkout Operations",
+              "fullTitle": "Sample test for cypress-cucumber Cart Checkout Operations",
+              "timedOut": null,
+              "duration": 4196,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "83bab4f5-a80d-4414-a150-df2732f4815c",
+              "parentUUID": "a8c6d633-b47b-46d8-b92c-b634dc59e21a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filling the form",
+              "fullTitle": "Sample test for cypress-cucumber Filling the form",
+              "timedOut": null,
+              "duration": 1404,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "0c011a97-b584-49c9-b4fd-bbaf42b9abc8",
+              "parentUUID": "a8c6d633-b47b-46d8-b92c-b634dc59e21a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83bab4f5-a80d-4414-a150-df2732f4815c",
+            "0c011a97-b584-49c9-b4fd-bbaf42b9abc8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
