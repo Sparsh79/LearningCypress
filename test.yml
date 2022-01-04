@@ -1,35 +1,10 @@
-# platform: linux
-
-# image_resource:
-#   type: docker-image
-#   source:
-#     repository: ddubson/cypress-e2e
-
-# inputs:
-#   - name: cypressgit
-# outputs:
-#   - name: npm-output
-
-# run:
-#   path: /bin/bash
-#   args:
-#     - cypressgit/ci/e2e.sh
-
-
+---
 platform: linux
-
 image_resource:
-  type: docker-image
-  source:
-    repository: maven
-    tag: latest
-
+    type: docker-image
+    source:
+        repository: ddubson/cypress-e2e
 inputs:
-  - name: cypressgit
-outputs:
-  - name: npm-output
-
+    - cypressgit
 run:
-  path: /bin/bash
-  args:
-    - cypressgit/ci/e2e.sh
+    path: cypressgit/ci/e2e.sh
