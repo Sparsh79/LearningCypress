@@ -1,3 +1,4 @@
+#!/bin/bash
 npm bin
 cd cypressgit/
 
@@ -11,4 +12,4 @@ npm install cypress --save-dev
 ./node_modules/.bin/cypress run
 
 /tmp/build/3c49d9cc/node_modules/.bin/cypress run
-${npm bin}/cypress run
+$(npm bin)/cypress run
