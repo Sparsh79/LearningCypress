@@ -1,9 +1,12 @@
 platform: linux
+
 image_resource:
-    type: docker-image
-    source:
-        repository: ddubson/cypress-e2e
+  type: docker-image
+  source:
+    repository: ddubson/cypress-e2e
 inputs:
     - cypressgit
 run:
-    path: cypressgit/ci/e2e.sh
+  path: /bin/bash
+  args:
+    - cypressgit/ci/e2e.sh
