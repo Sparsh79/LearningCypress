@@ -3,5 +3,6 @@
   "viewportHeight": 800,
   "projectId": "jamf47",
   "reporter": "mochawesome",
-  "testFiles": "**/*.{feature,js}"
+  "testFiles": "**/*.{feature,js}",
+  "chromeWebSecurity": false
 }

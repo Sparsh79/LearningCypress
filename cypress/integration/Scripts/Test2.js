@@ -84,6 +84,7 @@ describe("checking out checkboxes, dropDowns etc", function(){
 
         cy.url().should("include","www.rahulshettyacademy.com") // to assert that we succesfully move to the redirected url
 
+     cy.wait(4000);
         //now to go back to the intial page, we can make cypress to use the browser's back button. For this we the the function .go. To understand it use, you may refer https://docs.cypress.io/api/commands/go
         cy.go("back")
     })

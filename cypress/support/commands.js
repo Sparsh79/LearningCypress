@@ -31,3 +31,5 @@ Cypress.Commands.add('selectProduct', (productName) => {
     }
 
 }) })
+
+import 'cypress-file-upload';

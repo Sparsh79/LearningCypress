@@ -6,11 +6,11 @@ resources:
     uri: https://github.com/Sparsh79/LearningCypress.git
     branch: master
 
-# - name: node-image
-#   type: registry-image
-#   source:
-#     repository: node
-#     tag: 13.10.1-stretch
+- name: node-image
+  type: registry-image
+  source:
+    repository: node
+    tag: 13.10.1-stretch
 
 # - name: cypress-image
   # type: docker-image
@@ -21,22 +21,22 @@ jobs:
 - name: test
   public: true
   plan:
-  # - get: node-image
+  - get: node-image
   - get: cypressgit
     trigger: true
-  # - task: install
-  #   image: node-image
-  #   config:
-  #     inputs:
-  #     - name: cypressgit
-  #     outputs:
-  #     - name: dependencies
-  #       path: cypressgit/node_modules
-  #     platform: linux
-  #     run:
-  #       path: npm
-  #       args: ["install"]
-  #       dir: cypressgit
+  - task: install
+    image: node-image
+    config:
+      inputs:
+      - name: cypressgit
+      outputs:
+      - name: dependencies
+        path: cypressgit/node_modules
+      platform: linux
+      run:
+        path: npm
+        args: ["install"]
+        dir: cypressgit
   - task: running
     file: cypressgit/test.yml
   # - task: run-cypress

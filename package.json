@@ -28,5 +28,7 @@
     "mochawesome": "^6.2.2",
     "multiple-cucumber-html-reporter": "^1.18.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cypress-file-upload": "^5.0.8"
+  }
 }
