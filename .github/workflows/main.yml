@@ -14,7 +14,7 @@ jobs:
    cypress-test:
      name: Chrome Run
      runs-on: ubuntu-18.04
-     container: cypress/browser:node12.18.0-chrome83-ff7
+     container: cypress/browser:latest
      steps:
        - uses: actions/checkout@v2
        
