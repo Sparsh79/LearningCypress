@@ -23,4 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Cypress run
-        run: node_modules/.bin/cypress run --reporter mochawesome
+        run: | 
+             npm install cypress  
+             node_modules/.bin/cypress run --reporter mochawesome
+            
