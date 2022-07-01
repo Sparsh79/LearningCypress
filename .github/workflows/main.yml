@@ -26,4 +26,10 @@ jobs:
         run: | 
              npm install cypress  
              node_modules/.bin/cypress run --reporter mochawesome
+      - name: Storing report
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome.html
+          path: ./mochawesome-report/mochawesome.html
+          retention-days: 2
             
