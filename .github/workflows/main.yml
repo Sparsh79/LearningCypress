@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: mochawesome.html
-          path: ./mochawesome-report/mochawesome.html
+          name: mochawesome-report
+          path: ./mochawesome-report
           retention-days: 2
             
