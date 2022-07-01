@@ -28,6 +28,7 @@ jobs:
              node_modules/.bin/cypress run --reporter mochawesome
       - name: Storing report
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: mochawesome.html
           path: ./mochawesome-report/mochawesome.html
